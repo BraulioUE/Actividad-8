@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('conferencia', function (Blueprint $table) {
+        Schema::create('conferencias', function (Blueprint $table) {
             $table->id();
-            $table->string('logo');
-            $table->string('nombre conferencia', 40);
-            $table->string('SB en la coferncia');
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('conferencia');
+        Schema::dropIfExists('conferencias');
     }
 };
