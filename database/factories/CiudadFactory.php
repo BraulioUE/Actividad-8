@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use App\Models\Ciudad;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ciudad>
@@ -17,7 +19,7 @@ class CiudadFactory extends Factory
     public function definition(): array
     {
         return [
-            'nombre' => $faker->unique()->city,
+            'nombre' => $this->faker->unique()->city,
         ];
     }
 }
